@@ -49,12 +49,12 @@ function mpulse_plugin_page() {
 
 	if (isset($_POST['submit'])) {
 		$mp_key = trim($_POST['mpulse_api_key']);
-		$mp_pattern = '/[A-Z0-9]{5}\-[A-Z0-9]{5}\-[A-Z0-9]{5}\-[A-Z0-9]{5}\-[A-Z0-9]{5}/';
+		$mp_pattern = '/^([A-Z0-9]{5}-){4}[A-Z0-9]{5}$/';
 		if (preg_match($mp_pattern, $mp_key)) {
 			update_option('mpulse_api_key', $mp_key);
 			echo "<div id=\"footer\" class=\"soasta_footer\"> <p>Your key has been updated.</p></div>";
 		} else {
-			echo "<div id=\"footer\" class=\"soasta_footer\"> <p>Your API key is invalid! Format: A1A1A-B2B2B-C3C3C-D4D4D </p></div>";
+			echo "<div id=\"footer\" class=\"soasta_footer\"> <p>Your API key is invalid! Format: A1A1A-B2B2B-C3C3C-D4D4Dl-E5E5E </p></div>";
 		}
 	}
 ?>
@@ -64,7 +64,7 @@ function mpulse_plugin_page() {
 <img src="<?php echo plugin_dir_url("/", __FILE__) . trim(dirname(plugin_basename(__FILE__)), '/'); ?>/soasta_logo.png" alt="SOASTA Logo" />
 <h1>mPulse - Real User Measurement</h1>
 
-<p>Please enter your API KEY below. This can be found in your domain configuration within mPulse. If you do not yet have an mPulse account, you can <a href="http://www.soasta.com/free" target="new" title="Create a free mPulse account">set one up (For FREE!)</a></p>
+<p>Please enter your API KEY below. This can be found in your domain configuration within mPulse. If you do not yet have an mPulse account, you can <a href="http://www.soasta.com/free" target="_blank" title="Create a free mPulse account">set one up (For FREE!)</a></p>
 		<form method="post" action="" class="soasta_form">
 			<input name="mpulse_api_key" type="text" id="mpulse_api_key" class="soasta_input" value="<?php echo get_option('mpulse_api_key');?>" maxlength="29" placeholder="A1A1A-B2B2B-C3C3C-D4D4D-E5E5E"/>
 			<input name="submit" type="submit" class="soasta_submit"/>
