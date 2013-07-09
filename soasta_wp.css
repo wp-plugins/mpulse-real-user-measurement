@@ -14,7 +14,7 @@ General Styling for WP Admin Form
 	
 .soasta_footer {
 	position:absolute;
-	bottom:0;
+	bottom:40px;
 	width:500px;
 	height:40px;   /* Height of the footer */
 	margin: 10px 0px 0px 10px;
