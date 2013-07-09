@@ -1,4 +1,4 @@
-=== SOASTA mPulse Real User Measurement ===
+=== mPulse Real User Measurement ===
 Contributors: SOASTA
 Tags: SOASTA, mPulse, RUM, performance, perf, webperf, analytics, real time analytics, real user measurement, real user monitoring
 Stable tag: 1.0
