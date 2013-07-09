@@ -18,7 +18,7 @@ There's no question that web and mobile application performance affects user beh
 	- Directly from WordPress admin: 'Plugins' > 'Add new'. Search for "SOASTA", "mpulse", or "Real User Monitoring" and "Install Now"
 	or
 	- Upload entire directory to /wp-content/plugins
-3. Now, from your your Plugins page, activate mPulse and configure through 'Settings' or from the Plugins menue. (You will need your API Key from step 1.)
+3. Now, from your your Plugins page, activate mPulse and configure through 'Settings' or from the Plugins menu. (You will need your API Key from step 1.)
 
 == Screenshots ==
 
