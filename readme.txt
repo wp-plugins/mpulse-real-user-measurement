@@ -1,9 +1,9 @@
 === mPulse Real User Measurement ===
 Contributors: SOASTA
 Tags: SOASTA, mPulse, RUM, performance, perf, webperf, analytics, real time analytics, real user measurement, real user monitoring
-Stable tag: 1.0
+Stable tag: 2.0
 Requires at least: 2.0
-Tested up to: 3.5.2
+Tested up to: 4.2
 
 How fast do your users think your site is, really? How fast should it be? How do you get there?
 
@@ -13,7 +13,7 @@ There's no question that web and mobile application performance affects user beh
 
 == Installation ==
 
-1. If you haven't already, create an mPulse Lite account at http://www.soasta.com/free/ and copy your API key once you've configured a domain
+1. If you haven't already, create an mPulse account (http://www.soasta.com/mpulse/ and copy your API key once you've configured a domain
 2. Install the WordPress plugin
 	- Directly from WordPress admin: 'Plugins' > 'Add new'. Search for "SOASTA", "mpulse", or "Real User Monitoring" and "Install Now"
 	or
@@ -29,6 +29,9 @@ There's no question that web and mobile application performance affects user beh
 5. Input your API key into the WordPress plugin configuration for mPulse.
 
 == Changelog ==
+
+= 2.0 =
+* Changed the script loader code
 
 = 1.0 =
 * Initial version
