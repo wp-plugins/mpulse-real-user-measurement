@@ -78,32 +78,36 @@ function mpulse_plugin_page() {
 //Include the snippet in the head of each page
 function mpulse_add_rum_header() {
 ?>    
-	<script type='text/javascript'>(function(){
-	var dom,doc,where,iframe = document.createElement('iframe');
-	iframe.src = "javascript:false"; iframe.title = ""; iframe.role="presentation";
-	(iframe.frameElement || iframe).style.cssText = "width: 0; height: 0; border: 0";
-	where = document.getElementsByTagName('script')[0];
-	where.parentNode.insertBefore(iframe, where);
-	try {
-		doc = iframe.contentWindow.document;
-	} catch(e) {
-	dom = document.domain;
-	iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
-	doc = iframe.contentWindow.document;
-	}
-	doc.open()._l = function() {
-	var js = this.createElement("script");
-	if(dom) this.domain = dom;
-	js.id = "boomr-if-as";
-	js.src = '//c.go-mpulse.net/boomerang/' +
-	'<?php echo get_option('mpulse_api_key');?>';
-	BOOMR_lstart=new Date().getTime();
-	this.body.appendChild(js);
-	};
-	doc.write('<body onload="document._l();">');
-	doc.close();
-	})();</script>;
+<script>
+(function(){
+  if(window.BOOMR && window.BOOMR.version){return;}
+  var dom,doc,where,iframe = document.createElement('iframe');
+  iframe.src = "javascript:false";
+  iframe.title = ""; iframe.role="presentation";
+  (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+  where = document.getElementsByTagName('script')[0];
+  where.parentNode.insertBefore(iframe, where);
 
+  try {
+    doc = iframe.contentWindow.document;
+  } catch(e) {
+    dom = document.domain;
+    iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+    doc = iframe.contentWindow.document;
+  }
+  doc.open()._l = function() {
+    var js = this.createElement("script");
+    if(dom) this.domain = dom;
+    js.id = "boomr-if-as";
+    js.src = '//c.go-mpulse.net/boomerang/' +
+    '<?php echo get_option('mpulse_api_key');?>';
+    BOOMR_lstart=new Date().getTime();
+    this.body.appendChild(js);
+  };
+  doc.write('<body onload="document._l();">');
+  doc.close();
+})();
+</script>;
 <?php
 }
 
