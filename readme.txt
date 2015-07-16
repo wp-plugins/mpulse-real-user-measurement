@@ -35,3 +35,8 @@ There's no question that web and mobile application performance affects user beh
 
 = 1.0 =
 * Initial version
+
+== Upgrade Notice ==
+
+= 2.0 =
+This version replaces the old script loader for the mPulse tag. Upgrade immediately.
