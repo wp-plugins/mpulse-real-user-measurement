@@ -1,7 +1,7 @@
 === mPulse Real User Measurement ===
 Contributors: SOASTA
 Tags: SOASTA, mPulse, RUM, performance, perf, webperf, analytics, real time analytics, real user measurement, real user monitoring
-Stable tag: 2.1
+Stable tag: 2.2
 Requires at least: 2.0
 Tested up to: 4.2
 
@@ -30,8 +30,11 @@ There's no question that web and mobile application performance affects user beh
 
 == Changelog ==
 
+= 2.2 =
+* Fixed an issue with a trailing semi-colon in html
+
 = 2.1 =
-* Fixed semicolon bug with loader code. 
+* Minor bug fix
 
 = 2.0 =
 * Changed the script loader code
@@ -41,8 +44,5 @@ There's no question that web and mobile application performance affects user beh
 
 == Upgrade Notice ==
 
-= 2.1 =
-This version fixes the bug in the script loader code that resulted in printing a ";" in the html. Upgrade to this version immediately!!
-
-= 2.0 =
-This version fixes an issue with the previous script loader. Upgrade immediately. 
+= 2.2 =
+This version fixes the bug in the script loader code that resulted in printing a semi-colon in the html. Upgrade to this version immediately!!
